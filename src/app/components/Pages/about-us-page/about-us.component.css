@@ -1,0 +1,22 @@
+* {
+  color: #576F72;
+}
+
+.imgStyle {
+  width: 350px;
+  height: 350px;
+}
+
+@media screen and (max-width: 768px) {
+  .imgStyle {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .imgStyle {
+    width: 175px;
+    height: 175px;
+  }
+}

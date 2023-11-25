@@ -1,0 +1,27 @@
+<ul class="ps-4 pe-4">
+  <h2>Facilidades</h2>
+  <p>
+    {{information}}
+  </p>
+  <div class="content overflow-auto">
+
+    <li *ngFor="let facility of facilities;" class="d-flex">
+      <div class="card mb-3 w-100">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img width="300" height="250"
+            src={{facility.imagen}} alt='Imagen de la facilidad {{facility.name}}'>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title fw-bold">{{facility.nombre}}</h3>
+              <p class="card-text" style="text-align: justify;">{{facility.descripcion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+  </div>
+
+</ul>

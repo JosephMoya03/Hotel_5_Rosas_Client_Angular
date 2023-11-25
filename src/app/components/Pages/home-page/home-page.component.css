@@ -1,0 +1,26 @@
+/*Home Page styles*/
+.section-img {
+  width: 35%;
+}
+
+.section-text {
+  width: 65%;
+}
+
+* {
+  color: #576F72;
+}
+
+@media screen and (max-width: 768px) {
+  .information {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-img,
+  .section-text {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+}

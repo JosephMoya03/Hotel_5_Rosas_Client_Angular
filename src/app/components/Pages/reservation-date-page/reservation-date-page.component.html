@@ -1,0 +1,34 @@
+<div class="information d-flex p-3">
+  <section class="p-3 section-text" style="text-align: justify;">
+    <h2>
+      Reserva en Línea
+    </h2>
+    <form [formGroup]="reservationForm">
+
+      <label for="basic-url" class="form-label">Fecha de llegada</label>
+      <div class="input-group mb-3">
+        <input id="beginDate" class="form-control" type="datetime-local" formControlName="beginDate" />
+      </div>
+
+      <label for="basic-url" class="form-label">Fecha de Salida</label>
+      <div class="input-group mb-3">
+        <input id="endDate" class="form-control" type="datetime-local" formControlName="endDate">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Tipo de Habitación</span>
+
+        <select class="form-select form-select-sm" formControlName="roomType">
+          <option *ngFor="let roomType of roomTypes" value="{{roomType.pK_Tipo_Habitacion}}">
+            {{roomType.nombre }}</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-outline-primary" (click)="searchRoom()">Aceptar</button>
+      </div>
+    </form>
+
+    
+  </section>
+</div>

@@ -1,0 +1,48 @@
+<ul class="ps-4 pe-4">
+  <h2>Tarifas</h2>
+
+  <div class="content overflow-auto">
+
+    <li *ngFor="let rate of rates;" class="d-flex">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="img-fluid" width="300" height="250" src={{rate.imagen}}
+              alt='Imagen de la facilidad {{rate.nombre}}'>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title fw-bold text-decoration-underline">{{rate.nombre}}</h3>
+              <p class="card-text" style="text-align: justify;">{{rate.descripcion}}</p>
+              <ul class="pb-2" *ngFor="let caracteristica of rate.caracteristicas.split(','); let i = index">
+                <li *ngIf="i >= 1">
+                  <p class="card-text" style="text-align: justify;">
+                    {{caracteristica}}</p>
+                </li>
+              </ul>
+              <p class="card-text" style="text-align: justify;">
+                <strong>Tarifa:</strong> ${{rate.tarifa}}
+              </p>
+
+              <div *ngFor="let oferta of rate.ofertas_Temporada.split(',');  let i = index">
+                <div *ngIf="i >= 1">
+                  <strong>Oferta {{i}}:</strong> {{'Disponible en '+ oferta.split(';')[0] + ' se le aplica un '
+                + oferta.split(';')[1] + '%' + '  por lo tanto queda en ' + oferta.split(';')[2]}}
+                </div>
+              </div>
+
+              <div *ngFor="let oferta of rates;  let i = index">
+                <p class="card-text" style="text-align: justify;">
+                  <!--<strong>Oferta {{i}}:</strong> {{oferta}}-->
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+  </div>
+
+</ul>

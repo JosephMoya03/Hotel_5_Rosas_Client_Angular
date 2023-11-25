@@ -1,0 +1,79 @@
+<div class="information d-flex p-3">
+  <section class="p-3 w-100 section-text" style="text-align: justify;">
+    <h2>
+      Reserva en Línea
+    </h2>
+    <h3>
+      Habitacion Disponible #{{room.numero_Habitacion}}
+    </h3>
+    <h3>
+      Tipo: {{room.tipo_Habitacion}}
+    </h3>
+    <div class="information d-flex">
+      <img class="img-fluid" src={{room.imagen}} width="170" height="170"
+        alt="Imagen de la habitacion del Hotel 5 Rosas">
+      <div class="overflow-auto" style="max-width: 1000px; max-height: 180px;">
+        <section class="p-3 section-text">
+          <p style="text-align: justify;">
+            {{room.descripcion}}
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <h4>Tarifa diaria de reservación: ${{room.tarifa}}</h4>
+    <h4>Descuento de temporada {{room.nombre_Temporada}}: {{room.oferta}}%</h4>
+
+    <form>
+      <div class="d-flex justify-content-between mb-3">
+        <div>
+          <label for="nombre" class="form-label">Nombre:</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="client_name" placeholder="Juan"
+            required>
+        </div>
+        <div>
+          <label for="apellido" class="form-label">Apellido:</label>
+          <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="client_lastname"
+            placeholder="Perez" required>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between mb-3">
+        <div>
+          <label for="tarjeta" class="form-label">Número de tarjeta:</label>
+          <input type="text" class="form-control" id="tarjeta" name="tarjeta" [(ngModel)]="credit_number"
+            placeholder="1234 5678 9012 3456" required>
+        </div>
+        <div>
+          <label for="correo" class="form-label">Correo electrónico:</label>
+          <input type="email" class="form-control" id="correo" name="correo" [(ngModel)]="email"
+            placeholder="nombre@dominio.com" required>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between mb-3">
+        <div>
+          <label for="precio" class="form-label">Precio total:</label>
+          <input type="text" class="form-control" id="precio" name="precio" [(ngModel)]="cost" readonly>
+        </div>
+        <div>
+          <label for="costWithDiscount" class="form-label">Precio total con descuento:</label>
+          <input type="text" class="form-control" id="costWithDiscount" name="costWithDiscount"
+            [(ngModel)]="costWithDiscount" readonly>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between mb-3">
+        <div>
+          <label for="dias" class="form-label">Número de días:</label>
+          <input type="text" class="form-control" id="dias" name="dias" min="1" [(ngModel)]="numberDays" readonly>
+        </div>
+        <div class="d-flex">
+          <div class="me-5">
+            <button type="submit" class="btn btn-outline-danger" (click)="cancel()">Cancelar</button>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-outline-primary" (click)="validationReservation()">Reservar</button>
+          </div>
+        </div>
+      </div>
+    </form> 
+  </section>
+</div>

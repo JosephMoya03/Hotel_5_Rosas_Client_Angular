@@ -1,0 +1,16 @@
+*{
+  color: #576F72;
+  background-color: #ffffff;
+}
+
+.content{
+  max-width: 1000px; 
+  max-height: 600px;
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    max-width: 1200px;
+    max-height: fit-content;
+  }
+}

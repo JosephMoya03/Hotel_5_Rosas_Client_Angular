@@ -1,0 +1,8 @@
+*{
+  color: #E4DCCF;
+  background-color: #576F72;
+}
+
+.noHover{
+  pointer-events: none;
+}

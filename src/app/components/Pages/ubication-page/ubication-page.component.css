@@ -1,0 +1,19 @@
+*{
+  color: #576F72;
+}
+
+.content{
+  max-width: 1000px; 
+  max-height: fit-content;
+}
+
+@media screen and (max-width: 1200px){
+  .information{
+    width: 100%;
+    justify-content: center;
+    background-color: aqua;
+  }
+  .content{
+    max-width: 1200px; 
+  }
+}

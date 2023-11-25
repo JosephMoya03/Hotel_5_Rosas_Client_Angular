@@ -1,0 +1,58 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="4" class="table-title">Confirmación de Reserva</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <hr class="table-hr">
+        </td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h3><strong>Reserva realizada</strong></h3>
+        </td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="table-data-label">Nombre:</td>
+        <td class="table-data">{{ room.nombre_Cliente }}</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="table-data-label">Apellidos:</td>
+        <td class="table-data">{{ room.apellidos_Cliente }}</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="table-data-label">Número de Habitación:</td>
+        <td class="table-data">{{ room.fK_Habitacion }}</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="table-data-label">Fecha de transacción:</td>
+        <td class="table-data">{{ room.fecha_Transaccion }}</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="table-data-label">Fecha de inicio:</td>
+        <td class="table-data">{{ room.fecha_Inicio }}</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="table-data-label">Fecha de Fin:</td>
+        <td class="table-data">{{ room.fecha_Fin }}</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="table-data-label">Total:</td>
+        <td class="table-data">{{ room.tarifa_Total }}</td>
+      </tr>
+      <tr>
+        <td colspan="4" class="btn-download">
+          <h4>¡Gracias por preferirnos!</h4>
+          <h4>¡Esperamos que disfrute su estadía!</h4>
+          <button class="btn btn-primary text-white" (click)="generarPDF()">Descargar Factura Electrónica</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
